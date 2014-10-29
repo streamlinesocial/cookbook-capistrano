@@ -1,18 +1,22 @@
 capistrano Cookbook
 ===================
-Creates the required infrastructure to enalbe capistrano deployments. Things like
+
+Creates the required space in a server to enalbe capistrano deployments. Things like
 creating a deploy user and ensuring proper group additions etc are made.
+
+The goals of this are similar to an 'app' cookbook, but rather than focusing on fully
+installing and deploying the app, we just setup an area to deploy to.
 
 Usage
 =====
 
 Add the use of the recipes to the node or include them via another cookbook. The recipes all
-draw their configs from a node['capistrano'] and node['apps'] attribs from the node / env.
+draw their configs from a node['capistrano'] and node['apps'] attributes.
 
 Node Attributes
 ===============
 
-Example: (node attributes)
+Example: (node attributes in node, role or env json)
 
 ```
 "apps": {
